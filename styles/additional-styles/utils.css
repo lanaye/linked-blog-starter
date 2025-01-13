@@ -3,7 +3,6 @@
   text-align: left !important;
   line-height: normal !important;
   letter-spacing: normal !important;
-  background-color: #1e201e;
 }
 
 .internal-link-container > .internal-link:hover + .note-preview {

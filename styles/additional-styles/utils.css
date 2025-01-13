@@ -3,6 +3,7 @@
   text-align: left !important;
   line-height: normal !important;
   letter-spacing: normal !important;
+  background-color: #1e201e;
 }
 
 .internal-link-container > .internal-link:hover + .note-preview {
@@ -16,8 +17,7 @@
 }
 .internal-link {
   @apply rounded;
-  color: #0969da;
-  background-color: rgb(243 250 251) !important;
+  color: #a2c5ee;
 }
 
 /* Typography */

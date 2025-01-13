@@ -100,6 +100,7 @@
 }
 
 body {
+    font: italic 16px/2 fantasy;
     background-color: #1E201E;
     color: #ECDFCC
 }

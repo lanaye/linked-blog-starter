@@ -5,8 +5,8 @@
   letter-spacing: normal !important;
 }
 
-.note-preview > .descr {
-  overflow-y: scroll;
+.note-preview {
+  background-color: #2e312e;
 }
 
 .internal-link-container > .internal-link:hover + .note-preview {

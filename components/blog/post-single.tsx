@@ -31,9 +31,18 @@ function PostSingle({
   return (
     <section>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="pt-32 pb-12 md:pt-40 md:pb-20">
+        <div className="pt-24 pb-12 md:pt-34 md:pb-20">
           <div className="max-w-3xl mx-auto lg:max-w-none">
 
+            {/* Breadcrumbs */}
+            <div className={`pt-8 pb-8 flex justify-start ${bona.className} backlinks gap-x-4`}>
+              {
+                (Object.keys(backlinks).length > 0) && [
+                  <p className={bona.className}>Пов'язані сторінки:</p>,
+                  <Backlinks backlinks={backlinks} />
+                ]
+              }
+            </div>
             <article>
 
               {/* Article header */}
@@ -61,20 +70,6 @@ function PostSingle({
                   <PostBody content={content} />
 
                 </div>
-
-                {/* Sidebar */}
-                <aside className="relative lg:block lg:w-72 lg:ml-20 shrink-0">
-                  <div>
-                    <h4 className="text-lg font-bold leading-snug tracking-tight mb-4">Backlinks</h4>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
-                      {
-                        (Object.keys(backlinks).length > 0) && (
-                          <Backlinks backlinks={backlinks} />
-                        )
-                      }
-                    </div>
-                  </div>
-                </aside>
 
               </div>
 

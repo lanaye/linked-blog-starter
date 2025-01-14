@@ -20,7 +20,15 @@
 }
 .internal-link {
   @apply rounded;
-  color: #a2c5ee;
+  color: #697565;
+}
+
+.backlink {
+  color: #697565;
+}
+
+.backlinks {
+  font-size: 12px;
 }
 
 /* Typography */

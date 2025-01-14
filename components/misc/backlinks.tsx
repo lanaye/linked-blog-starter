@@ -13,13 +13,14 @@ type Props = {
 const Backlinks = ({ backlinks }: Props) => {
   return (
     <>
-      {Object.keys(backlinks).map((slug) => {
-        const post = backlinks[slug]
-        return (
-          <Link as={slug} href="[...slug]" className="col-span-1">
-            <NotePreview title={post.title} content={post.excerpt} />
-          </Link>
-        )
+      {Object.keys(backlinks).map((slug, index) => {
+        const post = backlinks[slug];
+        return [
+          <div>
+            <a className="internal-link backlink" href={`/${slug}`}>{post.title}</a>
+          </div>,
+          (index === Object.keys(backlinks).length - 1 ? null : "|")
+        ]
       })}
     </>
   )

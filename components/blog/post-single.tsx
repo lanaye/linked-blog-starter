@@ -1,4 +1,5 @@
 import React from 'react';
+import { Stalinist_One, Bona_Nova } from 'next/font/google'
 import Author from '../../interfaces/author';
 import Backlinks from '../misc/backlinks';
 import PostBody from './post-body';
@@ -9,12 +10,16 @@ type Props = {
   content: string,
   date?: string,
   author?: Author,
-  backlinks: { [k: string]: {
+  backlinks: {
+    [k: string]: {
       title: string,
       excerpt: string,
     }
   }
 }
+
+const bona = Bona_Nova({ weight: "400", subsets: ["cyrillic"] })
+const stalinist = Stalinist_One({ weight: "400", subsets: ["cyrillic"] });
 
 function PostSingle({
   title,
@@ -34,7 +39,7 @@ function PostSingle({
               {/* Article header */}
               <header className="max-w-3xl mx-auto mb-20">
                 {/* Title */}
-                <h1 className="h1 text-center mb-4 text-6xl">{title}</h1>
+                <h1 className={`h1 text-center mb-4 text-6xl ${stalinist.className}`}>{title}</h1>
               </header>
 
               {/* Article content */}
@@ -42,18 +47,18 @@ function PostSingle({
 
 
                 {/* Main content */}
-                <div>
+                <div className={bona.className}>
 
                   {/* Article meta */}
                   {(author || date) && (
                     <>
-                      <PostMeta author={author} date={date}/>
+                      <PostMeta author={author} date={date} />
                       <hr className="w-16 h-px pt-px bg-gray-200 border-0 my-6" />
                     </>
                   )}
 
                   {/* Article body */}
-                  <PostBody content={content}/>
+                  <PostBody content={content} />
 
                 </div>
 
@@ -64,7 +69,7 @@ function PostSingle({
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4">
                       {
                         (Object.keys(backlinks).length > 0) && (
-                            <Backlinks backlinks={backlinks} />
+                          <Backlinks backlinks={backlinks} />
                         )
                       }
                     </div>

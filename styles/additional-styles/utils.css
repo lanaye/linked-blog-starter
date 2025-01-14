@@ -23,6 +23,18 @@
   color: #697565;
 }
 
+.header {
+  background-color: #242624;
+}
+
+.header-top {
+  background-color: #2e312e;
+}
+
+.search {
+  background-color: rgb(85, 90, 85, 0.95)
+}
+
 .backlink {
   color: #697565;
 }

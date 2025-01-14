@@ -35,7 +35,7 @@ function PostSingle({
           <div className="max-w-3xl mx-auto lg:max-w-none">
 
             {/* Breadcrumbs */}
-            <div className={`pt-8 pb-8 flex justify-start ${bona.className} backlinks gap-x-4`}>
+            <div className={`pt-8 pb-4 flex justify-start ${bona.className} backlinks gap-x-4`}>
               {
                 (Object.keys(backlinks).length > 0) && [
                   <p className={bona.className}>Пов'язані сторінки:</p>,

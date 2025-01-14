@@ -6,7 +6,7 @@
   overflow-y: scroll;
 }
 
-.note-preview > span {
+.note-preview > .descr {
   overflow-y: scroll;
 }
 

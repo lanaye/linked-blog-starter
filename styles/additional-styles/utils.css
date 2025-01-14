@@ -3,7 +3,6 @@
   text-align: left !important;
   line-height: normal !important;
   letter-spacing: normal !important;
-  overflow-y: scroll;
 }
 
 .note-preview > .descr {
@@ -12,7 +11,6 @@
 
 .internal-link-container > .internal-link:hover + .note-preview {
   @apply block;
-  overflow-y: scroll;
 }
 .internal-link-container {
   @apply relative;

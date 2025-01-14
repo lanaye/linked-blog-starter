@@ -46,9 +46,9 @@ function PostSingle({
             <article>
 
               {/* Article header */}
-              <header className="max-w-3xl mx-auto mb-20">
+              <header className="max-w-3xl mx-auto md:mb-20 mb-10">
                 {/* Title */}
-                <h1 className={`h1 text-center mb-4 text-6xl ${stalinist.className}`}>{title}</h1>
+                <h1 className={`h1 text-center md:text-6xl text-3xl ${stalinist.className}`}>{title}</h1>
               </header>
 
               {/* Article content */}

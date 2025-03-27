@@ -1,15 +1,12 @@
 import React from 'react';
 import { Stalinist_One, Bona_Nova } from 'next/font/google'
-import Author from '../../interfaces/author';
 import Backlinks from '../misc/backlinks';
 import PostBody from './post-body';
-import PostMeta from './post-meta';
 
 type Props = {
   title: string,
   content: string,
   date?: string,
-  author?: Author,
   backlinks: {
     [k: string]: {
       title: string,
@@ -24,7 +21,6 @@ const stalinist = Stalinist_One({ weight: "400", subsets: ["cyrillic"] });
 function PostSingle({
   title,
   date,
-  author,
   content,
   backlinks
 }: Props) {
@@ -57,14 +53,6 @@ function PostSingle({
 
                 {/* Main content */}
                 <div className={bona.className}>
-
-                  {/* Article meta */}
-                  {(author || date) && (
-                    <>
-                      <PostMeta author={author} date={date} />
-                      <hr className="w-16 h-px pt-px bg-gray-200 border-0 my-6" />
-                    </>
-                  )}
 
                   {/* Article body */}
                   <PostBody content={content} />

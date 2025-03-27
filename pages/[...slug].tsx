@@ -7,6 +7,7 @@ import path from 'path'
 import PostSingle from '../components/blog/post-single'
 import Layout from '../components/misc/layout'
 import { NextSeo } from 'next-seo'
+import MainPage from '../components/MainPage/MainPage'
 
 type Items = {
   title: string,
@@ -25,12 +26,13 @@ export default function Post({ post, backlinks }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+  console.log(post);
   return (
     <>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
-        <Layout>
+        <Layout isNew={post.slug === 'draft'}>
           <NextSeo
             title={post.title}
             description={description}
@@ -40,19 +42,21 @@ export default function Post({ post, backlinks }: Props) {
               type: 'article',
               images: [{
                 url: (post.ogImage?.url) ? post.ogImage.url : "https://fleetingnotes.app/favicon/512.png",
-                width: (post.ogImage?.url) ? null: 512,
-                height: (post.ogImage?.url) ? null: 512,
+                width: (post.ogImage?.url) ? null : 512,
+                height: (post.ogImage?.url) ? null : 512,
                 type: null
               }]
             }}
           />
-          <PostSingle
-            title={post.title}
-            content={post.content}
-            date={post.date}
-            author={post.author}
-            backlinks={backlinks}
-          />
+          {post.slug === 'home' ?
+            <MainPage />
+            :
+            <PostSingle
+              title={post.title}
+              content={post.content}
+              date={post.date}
+              backlinks={backlinks}
+            />}
         </Layout>
       )}
     </>
@@ -104,7 +108,7 @@ export async function getStaticPaths() {
         params: {
           slug: post.slug.split(path.sep),
         },
-      } 
+      }
     }),
     fallback: false,
   }

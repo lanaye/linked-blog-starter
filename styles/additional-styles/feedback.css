@@ -1,0 +1,21 @@
+.feedback {
+  min-width: 575px;
+  width: -webkit-fill-available;
+  height: 287px;
+  border: 1px solid;
+  position: relative;
+  background-color: #271d27;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.feedback .corner-top {
+  top: -16px;
+  width: 92%;
+  left: 21px;
+}
+
+.feedback-avatar {
+  mix-blend-mode: lighten;
+}

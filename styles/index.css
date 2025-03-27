@@ -1,5 +1,11 @@
+@import "additional-styles/utils.css";
+@import "additional-styles/frames.css";
+@import "additional-styles/npc.css";
+@import "additional-styles/toggle.css";
+@import "additional-styles/player.css";
+@import "additional-styles/feedback.css";
+@import "additional-styles/main-page.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import 'additional-styles/utils.css'

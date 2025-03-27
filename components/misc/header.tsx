@@ -1,42 +1,106 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react';
-import Search from './search';
 
+import localFont from 'next/font/local'
+import { Advent_Pro } from 'next/font/google'
+const myFont = localFont({ src: '../../public/fonts/violance-thriller.regular.ttf' })
+const adventProFont = Advent_Pro({ weight: "700", subsets: ["cyrillic"] });
 const Header = () => {
   const [top, setTop] = useState(true);
-  const [searching, setSearching] = useState(false);
-  // detect whether user has scrolled the page down by 10px 
+  const [opened, setOpened] = useState(false);
   useEffect(() => {
     const scrollHandler = () => {
       window.pageYOffset > 10 ? setTop(false) : setTop(true)
     };
     window.addEventListener('scroll', scrollHandler);
     return () => window.removeEventListener('scroll', scrollHandler);
-  }, [top]);  
+  }, [top]);
 
   return (
-    <header className={`header fixed w-full z-30 transition duration-300 ease-in-out ${!top && 'header-top shadow-lg'}`}>
-      <div className="max-w-6xl mx-auto px-5 sm:px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <h2 className="shrink-0 mr-4 text-2xl font-bold tracking-tight md:tracking-tighter leading-tight">
-            <Link href="/" className="block hover:underline" aria-label="My Blog">
-              CHOSEN.
+    <header className={`header fixed max-w-[1440px] w-full z-30 transition duration-300 ease-in-out ${!top && 'header-top shadow-lg'}`}>
+      <div className="flex gap-16 items-center justify-between h-16 md:h-20 px-5 flex md:hidden">
+        <div className={`tham tham-e-squeeze tham-w-6 ${opened ? 'tham-active' : ''}`} onClick={() => setOpened(!opened)}>
+          <div className="tham-box">
+            <div className="tham-inner" />
+          </div>
+        </div>
+
+        <h2 className="text-5xl pt-4">
+          <Link href="/home" aria-label="Chosen" className={myFont.className}>
+            CHOSEN
+          </Link>
+        </h2>
+        <div className={`${!opened ? 'hidden' : 'toggle-menu'}`}>
+          <div className={`tham tham-e-squeeze tham-w-8 ${opened ? 'tham-active' : ''}`} onClick={() => setOpened(!opened)}>
+            <div className="tham-box">
+              <div className="tham-inner tham-color" />
+            </div>
+          </div>
+          <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
+            <Link href="/home" aria-label="Chosen" >
+              ГОЛОВНА
             </Link>
           </h2>
-          <ul className="flex grow justify-end flex-wrap items-center">
-            <li>
-              <button className="w-4 h-4 my-auto mx-2 border-black" aria-label="Search" onClick={() => setSearching(!searching)} disabled={searching}>
-                <svg className="w-4 h-4 fill-current" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 14c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zM7 2C4.243 2 2 4.243 2 7s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zM15.707 14.293L13.314 11.9a8.019 8.019 0 01-1.414 1.414l2.393 2.393a.997.997 0 001.414 0 .999.999 0 000-1.414z" />
-                </svg>
-              </button>
-            </li>
-          </ul>
-          {/* Search */}
-          <Search visible={searching} setVisible={setSearching}/>
+          <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
+            <Link href="/geo" aria-label="Chosen" >
+              ГЕОГРАФІЯ
+            </Link>
+          </h2>
+          <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
+            <Link href="/character" aria-label="Chosen" >
+              ПЕРСОНАЖІ
+            </Link>
+          </h2>
+          <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
+            <Link href="/session" aria-label="Chosen" >
+              СЕССІЇ
+            </Link>
+          </h2>
+          <img src='/assets/to.png' className='toggle-tower' />
+        </div>
+        <div className='flex items-center gap-4'>
+          <a href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
+            ЗАПИСАТИСЬ НА ГРУ
+          </a>
+          <a href="https://t.me/lana_ye"><img src="/assets/telegram.svg"></img></a>
         </div>
       </div>
-    </header>
+      <div className="flex gap-16 items-center justify-between h-16 md:h-20 px-5 hidden md:flex">
+        <h2 className="text-5xl pt-4">
+          <Link href="/home" aria-label="Chosen" className={myFont.className}>
+            CHOSEN
+          </Link>
+        </h2>
+        <div className='flex grow items-center gap-12'>
+          <h2 className={`text-lg ${adventProFont.className}`}>
+            <Link href="/home" aria-label="Chosen" >
+              ГОЛОВНА
+            </Link>
+          </h2>
+          <h2 className={`text-lg ${adventProFont.className}`}>
+            <Link href="/geo" aria-label="Chosen" >
+              ГЕОГРАФІЯ
+            </Link>
+          </h2>
+          <h2 className={`text-lg ${adventProFont.className}`}>
+            <Link href="/character" aria-label="Chosen" >
+              ПЕРСОНАЖІ
+            </Link>
+          </h2>
+          <h2 className={`text-lg ${adventProFont.className}`}>
+            <Link href="/session" aria-label="Chosen" >
+              СЕССІЇ
+            </Link>
+          </h2>
+        </div>
+        <div className='flex items-center gap-4'>
+          <a href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
+            ЗАПИСАТИСЬ НА ГРУ
+          </a>
+          <a href="https://t.me/lana_ye"><img src="/assets/telegram.svg"></img></a>
+        </div>
+      </div>
+    </header >
   )
 }
 

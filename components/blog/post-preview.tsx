@@ -1,12 +1,10 @@
 import Link from "next/link"
-import type Author from '../../interfaces/author'
 import PostMeta from "./post-meta"
 
 type Props = {
   title: string
   date?: string
   excerpt: string
-  author?: Author
   slug: string
 }
 
@@ -14,7 +12,6 @@ const PostPreview = ({
   title,
   date,
   excerpt,
-  author,
   slug,
 }: Props) => {
   return (
@@ -29,7 +26,7 @@ const PostPreview = ({
           {excerpt.slice(0, 500)}
         </div>
         <footer className="text-sm">
-          <PostMeta date={date} author={author} />
+          <PostMeta date={date} />
         </footer>
       </div>
       <Link as={`/${slug}`} href="/[...slug]" className="block shrink-0 ml-6">

@@ -89,7 +89,6 @@ function Search({ visible, setVisible }) {
             excerpt={res.item.excerpt}
             slug={res.item.slug}
             date={res.item.date}
-            author={res.item.author}
           />
         ))}
       </div>

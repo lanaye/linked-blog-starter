@@ -1,0 +1,29 @@
+.tham-inner.tham-color {
+  background-color: #d5b69f;
+}
+.toggle-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  top: 0vh;
+  left: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: rgb(39, 29, 39);
+  justify-content: center;
+  align-items: center;
+}
+.toggle-menu .tham {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+.toggle-tower {
+  position: absolute;
+  mix-blend-mode: lighten;
+  max-width: 100% !important;
+}

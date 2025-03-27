@@ -1,0 +1,63 @@
+.main-page01 {
+  background-image: url("/assets/dragon.png");
+  height: 720px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+  background-position: center;
+}
+
+.main-page02 {
+  height: 410px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-page03 {
+  height: 720px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.main-page04 {
+  height: 720px;
+  display: flex;
+  align-items: center;
+}
+
+.main-page05 {
+  height: 720px;
+  align-items: center;
+}
+
+.main-page06 {
+  height: 440px;
+  margin-top: 48px;
+  align-items: center;
+}
+
+.main-page07 {
+  background-image: url("/assets/feedback.png");
+  background-color: #2e232e;
+  height: 384px;
+  align-items: center;
+  display: flex;
+}
+
+.main-page09 {
+  background-image: url("/assets/join.png");
+  background-color: #2e232e;
+  height: 673px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -17,6 +17,7 @@ const searchIndex = allPosts.map((p) => {
 });
 const searcher = new Searcher(searchIndex, {keySelector: (obj) => `${obj.title}\n${obj.excerpt}`})
 
+//TODO
 export default function postHandler(req: NextApiRequest, res: NextApiResponse) {
   const {
     query: { q },

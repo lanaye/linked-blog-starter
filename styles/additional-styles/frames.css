@@ -1,0 +1,133 @@
+.frame01 {
+  background-color: rgb(39, 29, 39, 0.21);
+  height: 246px;
+  padding: 32px 35px 42px 60px;
+  width: 553px;
+  position: relative;
+  border: 1px solid;
+  border-left: 0;
+}
+
+.frame01 > .corner:first-child {
+  left: -20px;
+  top: -11px;
+  transform: rotate(180deg);
+}
+
+.frame01 > .corner {
+  right: -13px;
+  bottom: -11px;
+}
+
+.frame02 {
+  background-color: #271d27;
+  padding: 24px 12px 24px 24px;
+  max-width: 335px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+}
+
+.frame02 > .corner {
+  left: -13px;
+  top: -11px;
+  transform: rotate(180deg);
+}
+
+.frame03 {
+  background-color: #271d27;
+  padding: 5px;
+  max-width: 690px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.frame04 {
+  background-color: #271d27;
+  padding: 20px 12px;
+  max-width: 335px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 35px;
+  justify-content: center;
+}
+
+.frame04 > .corner {
+  right: -13px;
+  bottom: -11px;
+}
+
+.frame05 {
+  background-color: #271d27;
+  padding: 24px 12px 24px 24px;
+  max-width: 335px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frame07 > .corner-top,
+.frame06 > .corner-top,
+.frame05 > .corner-top {
+  left: 11px;
+  top: -9px;
+  width: 92%;
+}
+
+.frame06 {
+  background-color: #271d27;
+  padding: 28px;
+  max-width: 335px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frame06 div {
+  line-height: 1.25 !important;
+}
+
+.frame07 {
+  background-color: #271d27;
+  padding: 25px;
+  max-width: 692px;
+  width: -webkit-fill-available;
+  border: 1px solid;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frame07 > .corner-top {
+  left: 11px;
+  top: -10px;
+  width: 92%;
+}
+
+.frame08 {
+  border: 1px solid;
+  position: relative;
+  max-width: 574px;
+  width: -webkit-fill-available;
+}
+
+.frame08 > .corner-top {
+  left: 16px;
+  top: -16px;
+  width: 92%;
+}

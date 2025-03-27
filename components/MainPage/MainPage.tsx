@@ -213,11 +213,10 @@ function MainPage() {
           <img src='/assets/divider.svg' className='mix-blend-color-dodge' />
           <p className={`text-5xl text-center md:text-6xl uppercase ${MookManiaBold.className}`}>записатись на гру</p>
         </div>
-        <div className={`text-center w-[618px] text-lg ${adventProFont.className}`}>Одного дня у вашій свідомості промайнуло дивне послання, а на руці з’явилася загадкова мітка. Що це все означає? Чому саме ви? І чому та клята мітка не стирається?
-          За вільним столом на вас чекають інші з такими ж мітками. Що об’єднує вас?
+        <div className={`text-center w-[618px] text-lg ${adventProFont.className}`}>Хочеш стати героєм власної історії, розгадувати давні загадки й приймати рішення, що змінюють світ? У цій грі тебе чекає <span className='font-bold'>унікальний світ, захопливий сюжет</span> і персонажі з власними секретами...
           <br />
           <br />
-          Відповіді ховаються за межами звичного світу.
+          <span className='font-bold'>Приєднуйся</span>, якщо любиш цікаві історії, командну гру та можливість впливати на події!
         </div>
         <a target="_blank" className='uppercase' href="https://t.me/lana_ye">
           <div className={`button py-3 px-[64px] text-4xl w-[505px] text-center ${MookManiaBold.className}`}>записатись</div>

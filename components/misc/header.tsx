@@ -59,10 +59,10 @@ const Header = () => {
           <img src='/assets/to.png' className='toggle-tower' />
         </div>
         <div className='flex items-center gap-4'>
-          <a href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
+          <a target="_blank" href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
             ЗАПИСАТИСЬ НА ГРУ
           </a>
-          <a href="https://t.me/lana_ye"><img src="/assets/telegram.svg"></img></a>
+          <a target="_blank" href="https://t.me/lana_ye" ><img src="/assets/telegram.svg"></img></a>
         </div>
       </div>
       <div className="flex gap-16 items-center justify-between h-16 md:h-20 px-5 hidden md:flex">
@@ -94,10 +94,10 @@ const Header = () => {
           </h2>
         </div>
         <div className='flex items-center gap-4'>
-          <a href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
+          <a target="_blank" href="https://t.me/lana_ye" className={`text-lg ${adventProFont.className}`}>
             ЗАПИСАТИСЬ НА ГРУ
           </a>
-          <a href="https://t.me/lana_ye"><img src="/assets/telegram.svg"></img></a>
+          <a target="_blank" href="https://t.me/lana_ye"><img src="/assets/telegram.svg"></img></a>
         </div>
       </div>
     </header >

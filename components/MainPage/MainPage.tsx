@@ -96,7 +96,7 @@ function MainPage() {
               </div>
               <div className={`text-xs text-center ${MookManiaBold.className}`}>клуб настільних ігор Картотека, <br />
                 вул. Головна 148</div>
-              <a className='uppercase' href="https://t.me/lana_ye">
+              <a target="_blank" className='uppercase' href="https://t.me/lana_ye">
                 <div className={`button py-5 px-[64px] text-base ${MookManiaBold.className}`}>забронювати місце</div>
               </a>
             </div>
@@ -218,7 +218,7 @@ function MainPage() {
           <br />
           Відповіді ховаються за межами звичного світу.
         </div>
-        <a className='uppercase' href="https://t.me/lana_ye">
+        <a target="_blank" className='uppercase' href="https://t.me/lana_ye">
           <div className={`button py-3 px-[64px] text-4xl w-[505px] text-center ${MookManiaBold.className}`}>записатись</div>
         </a>
       </div>

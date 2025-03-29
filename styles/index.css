@@ -5,6 +5,7 @@
 @import "additional-styles/player.css";
 @import "additional-styles/feedback.css";
 @import "additional-styles/main-page.css";
+@import "additional-styles/geo-page.css";
 
 @tailwind base;
 @tailwind components;

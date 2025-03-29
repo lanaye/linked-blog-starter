@@ -1,0 +1,29 @@
+.geo-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 20px 50px;
+}
+
+.geo-page .frame01 {
+  height: 100%;
+  border: 1px solid;
+  width: 100%;
+  padding: 0;
+}
+
+.geo-page .frame01 > .corner {
+  left: -13px;
+  top: -11px;
+  transform: rotate(180deg);
+}
+
+.region:hover {
+  color: #8e6656;
+}
+
+.region-image {
+  /* position: absolute; */
+  height: 100%;
+  /* right: 0; */
+}

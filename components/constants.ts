@@ -31,7 +31,6 @@ export const sessions = [
   }
 ]
 
-
 export const players = [
   {
     name: 'Кіаран',
@@ -108,4 +107,57 @@ export const npcs = [
     additionalText: '"безсмертна пітьма", колишня увʼязнена',
     url: '/character/neyra'
   },
+]
+
+export const regions = [
+  {
+    name: 'Балторо',
+    url: '/geo/baltoro',
+    src: '/assets/baltoro.png'
+  },
+  {
+    name: 'Ілліум',
+    url: '/geo/illium',
+    src: '/assets/illium.png'
+  },
+  {
+    name: 'Метахара',
+    url: '/geo/metahara',
+    src: '/assets/metahara.png'
+  },
+  {
+    name: 'Рагморн',
+    url: '/geo/ragmorn',
+    src: '/assets/ragmorn.png'
+  },
+  {
+    name: 'Аль-Тайрен',
+    url: '/geo/al-tayren',
+    src: '/assets/al-tayren.png'
+  },
+  {
+    name: 'Лоренгар',
+    url: '/geo/lorengar',
+    src: '/assets/lorengar.png'
+  },
+  {
+    name: 'Хартакс',
+    url: '/geo/hartax',
+    src: '/assets/hartax.png'
+  },
+  {
+    name: 'Скорхет',
+    url: '/geo/skorhet',
+    src: '/assets/skorhet.png'
+  },
+  {
+    name: 'Меридіан',
+    url: '/geo/merydian',
+    src: '/assets/merydian.png'
+  },
+  {
+    name: 'Сельва',
+    url: '/geo/selva',
+    src: '/assets/selva.png'
+  }
 ]

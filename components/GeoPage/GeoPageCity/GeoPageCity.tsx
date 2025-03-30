@@ -15,7 +15,7 @@ function GeoPageCity({
   post
 }: Props) {
 
-  const backLink = post.backLink?.split(',');
+  const backLink = post.backLink?.split(',') || null;
   return (
     <>
       <div className={'geo-city'}>
@@ -25,7 +25,7 @@ function GeoPageCity({
           <div className='p-8 overflow-y-scroll scroll-custom flex flex-col gap-9 city-link'>
             <div className='flex flex-col gap-1'>
               <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>
-              <a className={`self-center text-center text-base ${adventProFontBold.className}`} href={backLink[1]}>{`(${backLink[0]})`}</a>
+              {backLink && <a className={`self-center text-center text-base ${adventProFontBold.className}`} href={backLink[1]}>{`(${backLink[0]})`}</a>}
             </div>
 
             <div

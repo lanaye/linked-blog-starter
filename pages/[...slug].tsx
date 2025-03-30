@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import { getPostBySlug, getAllPosts, getLinksMapping } from '../lib/api'
+import { getPostBySlug, getAllPosts } from '../lib/api'
 import { markdownToHtml } from '../lib/markdownToHtml'
 import type PostType from '../interfaces/post'
 import path from 'path'
@@ -8,6 +8,8 @@ import PostSingle from '../components/blog/post-single'
 import Layout from '../components/misc/layout'
 import { NextSeo } from 'next-seo'
 import MainPage from '../components/MainPage/MainPage'
+import GeoPage from '../components/GeoPage/GeoPage'
+import GeoPageRegion from '../components/GeoPageRegion/GeoPageRegion'
 
 type Items = {
   title: string,
@@ -26,7 +28,25 @@ export default function Post({ post, backlinks }: Props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  console.log(post);
+  const getPage = (post: PostType) => {
+    if (post.slug === 'home') {
+      return <MainPage />
+    }
+    if (post.slug === 'geo') {
+      return <GeoPage />
+    }
+
+    if (post.slug.includes('geo')) {
+      return <GeoPageRegion post={post} />
+    }
+
+    return <PostSingle
+      title={post.title}
+      content={post.content}
+      date={post.date}
+      backlinks={backlinks}
+    />
+  }
   return (
     <>
       {router.isFallback ? (
@@ -48,15 +68,7 @@ export default function Post({ post, backlinks }: Props) {
               }]
             }}
           />
-          {post.slug === 'home' ?
-            <MainPage />
-            :
-            <PostSingle
-              title={post.title}
-              content={post.content}
-              date={post.date}
-              backlinks={backlinks}
-            />}
+          {getPage(post)}
         </Layout>
       )}
     </>
@@ -81,13 +93,8 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
   ])
+
   const content = await markdownToHtml(post.content || '', slug)
-  const linkMapping = await getLinksMapping()
-  const backlinks = Object.keys(linkMapping).filter(k => linkMapping[k].includes(post.slug) && k !== post.slug)
-  const backlinkNodes = Object.fromEntries(await Promise.all(backlinks.map(async (slug) => {
-    const post = await getPostBySlug(slug, ['title', 'excerpt']);
-    return [slug, post]
-  })));
 
   return {
     props: {
@@ -95,7 +102,6 @@ export async function getStaticProps({ params }: Params) {
         ...post,
         content,
       },
-      backlinks: backlinkNodes,
     },
   }
 }

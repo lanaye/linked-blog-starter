@@ -60,26 +60,7 @@ export function getAllPosts(fields: string[] = []) {
   return posts
 }
 
-export function getLinksMapping() {
-  const linksMapping = new Map<string, string[]>();
-  const postsMapping = new Map((getAllPosts(['slug', 'content'])).map(i => [i.slug, i.content]));
-  const allSlugs = new Set(postsMapping.keys());
-  postsMapping.forEach((content, slug) => {
-    const mdLink = /\[[^\[\]]+\]\(([^\(\)]+)\)/g
-    const matches = Array.from(content.matchAll(mdLink))
-    const linkSlugs = []
-    for (var m of matches) {
-      const linkSlug = getSlugFromHref(slug, m[1])
-      if (allSlugs.has(linkSlug)) {
-        linkSlugs.push(linkSlug);
-      }
-    }
-    linksMapping[slug] = linkSlugs
-  });
-  return linksMapping;
-}
-
-export function getSlugFromHref (currSlug: string, href: string) {
+export function getSlugFromHref(currSlug: string, href: string) {
   return decodeURI(path.join(...currSlug.split(path.sep).slice(0, -1), href)).replace(/\.md(?:#[^\)]*)?$/, '')
 }
 

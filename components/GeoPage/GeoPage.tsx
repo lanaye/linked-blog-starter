@@ -29,7 +29,7 @@ function GeoPage() {
   return (
     <>
       <div className={'geo-page'}>
-        <div className='frame01 flex justify-between'
+        <div className='frame01 flex justify-between p-[0]'
         >
           <img src='/assets/corner.svg' className='corner' />
           <div className='flex flex-col m-12 mr-0 overflow-y-scroll scroll-custom w-full max-h-[94%]'>

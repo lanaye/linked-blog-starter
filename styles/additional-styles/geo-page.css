@@ -25,6 +25,17 @@
   height: 100%;
 }
 
+.cross {
+  mask: url("/assets/cross.svg");
+  background-color: #d5b69f;
+  width: 48px;
+  height: 48px;
+}
+
+.cross:hover {
+  background-color: #8e6656;
+}
+
 .city ul {
   display: flex;
   justify-content: inherit;
@@ -79,6 +90,13 @@
   padding: 12px;
   border: 1px solid;
   text-transform: uppercase;
+  position: relative;
+}
+.city li strong::after {
+  content: url("/assets/corner-top.svg");
+  position: absolute;
+  bottom: -13px;
+  left: 32px;
 }
 
 .city li strong:hover {
@@ -89,4 +107,18 @@
   padding: 23px 33px;
   font-style: normal;
   line-height: normal !important;
+}
+
+
+.geo-city {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 20px 50px;
+}
+
+.geo-city .frame01 {
+  height: 100%;
+  border: 1px solid;
+  width: 100%;
 }

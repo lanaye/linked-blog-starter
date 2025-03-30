@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import localFont from 'next/font/local';
 import { regions } from '../constants';
 import { motion } from "motion/react"
@@ -27,32 +27,29 @@ function GeoPage() {
   }
 
   return (
-    <>
-      <div className={'geo-page'}>
-        <div className='frame01 flex justify-between p-[0]'
+    <div className={'geo-page'}>
+      <div className='frame01 flex justify-between p-[0]'>
+        <img src='/assets/corner.svg' className='corner' />
+        <div className='flex flex-col m-12 mr-0 overflow-y-scroll scroll-custom w-full max-h-[94%]'>
+          {regionsList()}
+        </div>
+        <motion.div
+          key={choosenRegion}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            default: { duration: 1 },
+            type: "ease-in"
+          }}
         >
-          <img src='/assets/corner.svg' className='corner' />
-          <div className='flex flex-col m-12 mr-0 overflow-y-scroll scroll-custom w-full max-h-[94%]'>
-            {regionsList()}
-          </div>
-          <motion.div
-            key={choosenRegion}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{
-              default: { duration: 1 },
-              type: "ease-in"
-            }}
-          >
-            {choosenRegion > -1 ?
-              <img className="region-image" src={regions[choosenRegion].src} />
-              : null}
-            {choosenRegion === -1 ? <img className="region-image" src={'/assets/map.png'} /> : null
-            }
-          </motion.div>
-        </div >
+          {choosenRegion > -1 ?
+            <img className="region-image" src={regions[choosenRegion].src} />
+            : null}
+          {choosenRegion === -1 ? <img className="region-image" src={'/assets/map.png'} /> : null
+          }
+        </motion.div>
       </div >
-    </>
+    </div >
   );
 }
 

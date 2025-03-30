@@ -43,11 +43,6 @@ function parseFileToObj(pathToObj: string) {
   if (typeof data['title'] === 'undefined') {
     data['title'] = decodeURI(path.basename(pathToObj, '.md'))
   }
-  if (typeof data['date'] === 'object') {
-    data['date'] = data['date']?.toISOString()
-  } else if (typeof data['date'] !== 'undefined') {
-    data['date'] = data['date'].toString()
-  }
   return data
 }
 

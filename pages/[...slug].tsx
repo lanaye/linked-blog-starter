@@ -9,7 +9,8 @@ import Layout from '../components/misc/layout'
 import { NextSeo } from 'next-seo'
 import MainPage from '../components/MainPage/MainPage'
 import GeoPage from '../components/GeoPage/GeoPage'
-import GeoPageRegion from '../components/GeoPageRegion/GeoPageRegion'
+import GeoPageRegion from '../components/GeoPage/GeoPageRegion/GeoPageRegion'
+import GeoPageCity from '../components/GeoPage/GeoPageCity/GeoPageCity'
 
 type Items = {
   title: string,
@@ -35,16 +36,15 @@ export default function Post({ post, backlinks }: Props) {
     if (post.slug === 'geo') {
       return <GeoPage />
     }
-
     if (post.slug.includes('geo')) {
       return <GeoPageRegion post={post} />
     }
-
+    if (post.slug.includes('city')) {
+      return <GeoPageCity post={post} />
+    }
     return <PostSingle
       title={post.title}
       content={post.content}
-      date={post.date}
-      backlinks={backlinks}
     />
   }
   return (

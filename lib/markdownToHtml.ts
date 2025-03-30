@@ -9,7 +9,6 @@ import { getSlugFromHref, updateMarkdownLinks } from './api'
 import removeMd from 'remove-markdown'
 import { Element } from 'hast-util-select'
 import { renderToStaticMarkup } from "react-dom/server"
-import NotePreview from '../components/misc/note-preview'
 import { fromHtml } from 'hast-util-from-html'
 
 
@@ -41,13 +40,6 @@ export function getMDExcerpt(markdown: string, length: number = 500) {
     gfm: true,
   }) as string
   return text.slice(0, length).trim();
-}
-
-export function createNoteNode(title: string, content: string) {
-  const mdContentStr = getMDExcerpt(content);
-  const htmlStr = renderToStaticMarkup(NotePreview({ title, content: mdContentStr }))
-  const noteNode = fromHtml(htmlStr);
-  return noteNode;
 }
 
 function rewriteLinkNodes(node, linkNodeMapping: Map<string, any>, currSlug) {

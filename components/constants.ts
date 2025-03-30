@@ -131,7 +131,8 @@ export const regions = [
   {
     name: 'Рагморн',
     url: '/geo/ragmorn',
-    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/ragmorn_ohxzv8.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/ragmorn_ohxzv8.png',
+    active: true,
   },
   {
     name: 'Аль-Тайрен',

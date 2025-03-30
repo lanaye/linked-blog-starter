@@ -10,7 +10,7 @@ function GeoPage() {
     return regions.map((region, index) =>
       <a
         href={region.url}
-        className='region py-4'
+        className={`region py-4 ${!region.active ? 'not-ready' : ''}`}
         onMouseEnter={(e) => {
           setChoosenRegion(index);
           e.stopPropagation();
@@ -28,7 +28,7 @@ function GeoPage() {
 
   const regionsImageList = () => {
     return regions.map((region, index) => {
-      return <img className={`region-image ${index === choosenRegion ? '' : 'hidden'}`} src={region.src} />
+      return <img className={`region-image ${index === choosenRegion ? '' : 'hidden'} ${!region.active ? 'not-ready' : ''}`} src={region.src} />
     })
   }
   return (

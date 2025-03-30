@@ -21,7 +21,7 @@ function GeoPageRegion({
         <div className='frame01 flex flex-col justify-center gap-4 p-8'
         >
           <img src='/assets/corner.svg' className='corner' />
-          <div className='flex justify-between'>
+          <div className='flex justify-between items-baseline'>
             <div/>
             <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>
             <a href='/geo'>

@@ -48,8 +48,7 @@ function GeoPage() {
           }}
         >
           {regionsImageList()}
-          {choosenRegion === -1 ? <img className="region-image" src={'/assets/map.png'} /> : null
-          }
+          {<img className={`region-image ${choosenRegion === -1 ? '' : 'hidden'}`} src={'/assets/map.png'} />}
         </motion.div>
       </div >
     </div >

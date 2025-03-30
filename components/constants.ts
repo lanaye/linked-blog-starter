@@ -113,51 +113,51 @@ export const regions = [
   {
     name: 'Балторо',
     url: '/geo/baltoro',
-    src: '/assets/baltoro.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360213/baltoro_o3e9vd.png'
   },
   {
     name: 'Ілліум',
     url: '/city/illium',
-    src: '/assets/illium.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360213/illium_rtzpzo.png'
   },
   {
     name: 'Метахара',
     url: '/geo/metahara',
-    src: '/assets/metahara.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360219/metahara_stghkj.png'
   },
   {
     name: 'Рагморн',
     url: '/geo/ragmorn',
-    src: '/assets/ragmorn.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/ragmorn_ohxzv8.png'
   },
   {
     name: 'Аль-Тайрен',
     url: '/geo/al-tayren',
-    src: '/assets/al-tayren.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743359993/al-tayren_itrgv7.png'
   },
   {
     name: 'Лоренгар',
     url: '/geo/lorengar',
-    src: '/assets/lorengar.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360213/lorengar_a54die.png'
   },
   {
     name: 'Хартакс',
     url: '/geo/hartax',
-    src: '/assets/hartax.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360213/hartax_lzhxis.png'
   },
   {
     name: 'Скорхет',
     url: '/geo/skorhet',
-    src: '/assets/skorhet.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/skorhet_fhlijd.png'
   },
   {
     name: 'Меридіан',
     url: '/geo/merydian',
-    src: '/assets/merydian.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360218/Median_impu1s.png'
   },
   {
     name: 'Сельва',
     url: '/geo/selva',
-    src: '/assets/selva.png'
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/selva_ngmcrq.png'
   }
 ]

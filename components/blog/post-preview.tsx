@@ -1,5 +1,4 @@
 import Link from "next/link"
-import PostMeta from "./post-meta"
 
 type Props = {
   title: string
@@ -25,9 +24,6 @@ const PostPreview = ({
         <div className="text-lg mb-4 text-ellipsis">
           {excerpt.slice(0, 500)}
         </div>
-        <footer className="text-sm">
-          <PostMeta date={date} />
-        </footer>
       </div>
       <Link as={`/${slug}`} href="/[...slug]" className="block shrink-0 ml-6">
         <span className="sr-only">Read more</span>

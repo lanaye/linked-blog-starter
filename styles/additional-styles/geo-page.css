@@ -150,3 +150,8 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+.not-ready {
+  cursor: not-allowed;
+  filter: grayscale(1)
+}

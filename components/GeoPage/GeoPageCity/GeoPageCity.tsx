@@ -8,25 +8,31 @@ type Props = {
 }
 
 const MookManiaBold = localFont({ src: '../../../public/fonts/Mookmania-Bold.otf' })
-const adventProFont = Advent_Pro({ weight: "200", subsets: ["cyrillic"] });
+const adventProFont = Advent_Pro({ subsets: ["cyrillic"] });
+const adventProFontBold = Advent_Pro({ weight: "700", subsets: ["cyrillic"] });
 
 function GeoPageCity({
   post
 }: Props) {
 
-  const isMoreThanTwo = (post.content.match(/<li>/g) || []).length > 3;
+  const backLink = post.backLink.split(',');
   return (
     <>
       <div className={'geo-city'}>
-        <div className='frame01 flex flex-col justify-center gap-4 p-8'
+        <div className='frame01 flex flex justify-center p-[0]'
         >
-          <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>
-          <div className={`text-center text-base self-center w-[50%] ${adventProFont.className}`}>{post.excerpt}</div>
+          <img className="w-[40%] object-cover border-r-[1px] border-inherit" src={post.excerpt} />
+          <div className='p-8 overflow-y-scroll scroll-custom flex flex-col gap-9 city-link'>
+            <div className='flex flex-col gap-1'>
+              <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>
+              <a className={`self-center text-center text-base ${adventProFontBold.className}`} href={backLink[1]}>{`(${backLink[0]})`}</a>
+            </div>
 
-          <div
-            className={`city ${isMoreThanTwo ? 'justify-start' : 'justify-center '}`}
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+            <div
+              className={adventProFont.className}
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </div>
         </div>
       </div>
     </>

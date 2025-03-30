@@ -60,12 +60,6 @@ export default function Post({ post, backlinks }: Props) {
               title: post.title,
               description,
               type: 'article',
-              images: [{
-                url: (post.ogImage?.url) ? post.ogImage.url : "https://fleetingnotes.app/favicon/512.png",
-                width: (post.ogImage?.url) ? null : 512,
-                height: (post.ogImage?.url) ? null : 512,
-                type: null
-              }]
             }}
           />
           {getPage(post)}
@@ -87,11 +81,9 @@ export async function getStaticProps({ params }: Params) {
   const post = await getPostBySlug(slug, [
     'title',
     'excerpt',
-    'date',
     'slug',
-    'author',
     'content',
-    'ogImage',
+    'backLink',
   ])
 
   const content = await markdownToHtml(post.content || '', slug)

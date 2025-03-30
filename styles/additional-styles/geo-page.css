@@ -9,6 +9,7 @@
   height: 100%;
   border: 1px solid;
   width: 100%;
+  background-color: #271D27;
 }
 
 .geo-page .frame01 > .corner {
@@ -121,4 +122,26 @@
   height: 100%;
   border: 1px solid;
   width: 100%;
+  background-color: #271D27;
+}
+
+.city-link a {
+  text-decoration: underline;
+  color: rgb(142, 102, 86)
+}
+
+.city-link a:hover {
+  text-decoration: underline;
+  color: rgb(142, 102, 86, 60%)
+}
+
+.geo-city li{
+ list-style: none;
+}
+
+.geo-city h5 {
+  margin-top: 16px;
+  font-family: "MookManiaBold", "MookManiaBold Fallback";
+  font-size: 18px;
+  font-weight: 700;
 }

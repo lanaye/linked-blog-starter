@@ -3,6 +3,7 @@ type PostType = {
   excerpt: string
   title: string
   content: string
+  backLink: string
 }
 
 export default PostType

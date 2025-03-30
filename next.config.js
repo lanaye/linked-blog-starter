@@ -8,5 +8,7 @@ module.exports = {
       },
     ]
   },
-  outputFileTracingIncludes: "{.next,*.cache,node_modules,public,app}/**"
+  outputFileTracingIncludes: {
+    "/*": ['public/**/*', '.next/**/*'],
+  }
 }

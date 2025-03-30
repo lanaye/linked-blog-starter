@@ -26,6 +26,11 @@ function GeoPage() {
       </a >)
   }
 
+  const regionsImageList = () => {
+    return regions.map((region, index) => {
+      return <img className={`region-image ${index === choosenRegion ? '' : 'hidden'}`} src={region.src} />
+    })
+  }
   return (
     <div className={'geo-page'}>
       <div className='frame01 flex justify-between p-[0]'>
@@ -42,9 +47,7 @@ function GeoPage() {
             type: "ease-in"
           }}
         >
-          {choosenRegion > -1 ?
-            <img className="region-image" src={regions[choosenRegion].src} />
-            : null}
+          {regionsImageList()}
           {choosenRegion === -1 ? <img className="region-image" src={'/assets/map.png'} /> : null
           }
         </motion.div>

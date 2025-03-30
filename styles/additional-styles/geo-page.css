@@ -9,7 +9,7 @@
   height: 100%;
   border: 1px solid;
   width: 100%;
-  background-color: #271D27;
+  background-color: #271d27;
 }
 
 .geo-page .frame01 > .corner {
@@ -115,7 +115,6 @@
   line-height: normal !important;
 }
 
-
 .geo-city {
   height: 100vh;
   display: flex;
@@ -127,21 +126,25 @@
   height: 100%;
   border: 1px solid;
   width: 100%;
-  background-color: #271D27;
+  background-color: #271d27;
 }
 
 .city-link a {
   text-decoration: underline;
-  color: rgb(142, 102, 86)
+  color: rgb(142, 102, 86);
 }
 
 .city-link a:hover {
   text-decoration: underline;
-  color: rgb(142, 102, 86, 60%)
+  color: rgb(142, 102, 86, 60%);
 }
 
-.geo-city li{
- list-style: none;
+.geo-city li {
+  list-style: none;
+}
+
+.geo-city li em {
+  padding-left: 20px;
 }
 
 .geo-city h5 {
@@ -153,5 +156,5 @@
 
 .not-ready {
   cursor: not-allowed;
-  filter: grayscale(1)
+  filter: grayscale(1);
 }

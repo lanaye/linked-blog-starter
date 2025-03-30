@@ -174,7 +174,7 @@ function MainPage() {
       <div className={'main-page04'}>
         <div className='flex flex-col gap-5 items-center w-full'>
           <p className={`text-5xl text-center md:text-5xl uppercase ${MookManiaBold.className} z-[2]`}>географія світу</p>
-          <img src='/assets/map1.svg' className='mix-blend-screen absolute mt-6 md:mt-14' />
+          <img src='https://res.cloudinary.com/dnalwdszh/image/upload/v1743360213/map1_xwbpro.svg' className='mix-blend-screen absolute mt-6 md:mt-14' />
           <img src='/assets/map2.svg' className='mix-blend-darken relative -top-1 md:-top-3' />
         </div>
       </div>

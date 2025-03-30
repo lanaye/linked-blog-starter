@@ -8,4 +8,5 @@ module.exports = {
       },
     ]
   },
+  outputFileTracingIncludes: "{.next,*.cache,node_modules,public,app}/**"
 }

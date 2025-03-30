@@ -100,6 +100,11 @@
   left: 32px;
 }
 
+.city li img {
+  height: 193px;
+  object-fit: cover;
+}
+
 .city li strong:hover {
   background-color: rgb(142, 102, 86, 0.25);
 }

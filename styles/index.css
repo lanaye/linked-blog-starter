@@ -6,6 +6,7 @@
 @import "additional-styles/feedback.css";
 @import "additional-styles/main-page.css";
 @import "additional-styles/geo-page.css";
+@import "additional-styles/characters-page.css";
 
 @tailwind base;
 @tailwind components;

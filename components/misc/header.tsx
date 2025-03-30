@@ -47,12 +47,12 @@ const Header = () => {
             </Link>
           </h2>
           <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
-            <Link href="/character" aria-label="Chosen" >
+            <Link href="/characters" aria-label="Chosen" >
               ПЕРСОНАЖІ
             </Link>
           </h2>
           <h2 className={`text-4xl z-[2] ${adventProFont.className}`}>
-            <Link href="/session" aria-label="Chosen" >
+            <Link href="/sessions" aria-label="Chosen" >
               СЕССІЇ
             </Link>
           </h2>
@@ -83,12 +83,12 @@ const Header = () => {
             </Link>
           </h2>
           <h2 className={`text-lg ${adventProFont.className}`}>
-            <Link href="/character" aria-label="Chosen" >
+            <Link href="/characters" aria-label="Chosen" >
               ПЕРСОНАЖІ
             </Link>
           </h2>
           <h2 className={`text-lg ${adventProFont.className}`}>
-            <Link href="/session" aria-label="Chosen" >
+            <Link href="/sessions" aria-label="Chosen" >
               СЕССІЇ
             </Link>
           </h2>

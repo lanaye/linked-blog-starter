@@ -11,6 +11,7 @@ import MainPage from '../components/MainPage/MainPage'
 import GeoPage from '../components/GeoPage/GeoPage'
 import GeoPageRegion from '../components/GeoPage/GeoPageRegion/GeoPageRegion'
 import GeoPageCity from '../components/GeoPage/GeoPageCity/GeoPageCity'
+import Characters from '../components/Characters/Characters'
 
 type Items = {
   title: string,
@@ -41,6 +42,9 @@ export default function Post({ post, backlinks }: Props) {
     }
     if (post.slug.includes('city')) {
       return <GeoPageCity post={post} />
+    }
+    if (post.slug === 'characters') {
+      return <Characters post={post} />
     }
     return <PostSingle
       title={post.title}

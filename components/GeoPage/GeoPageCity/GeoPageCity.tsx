@@ -15,7 +15,7 @@ function GeoPageCity({
   post
 }: Props) {
 
-  const backLink = post.backLink.split(',');
+  const backLink = post.backLink?.split(',');
   return (
     <>
       <div className={'geo-city'}>

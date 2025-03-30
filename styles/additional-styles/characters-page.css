@@ -7,5 +7,5 @@
 }
 
 .characters-page .npc {
-  width: auto;
+  width: min-content;
 }

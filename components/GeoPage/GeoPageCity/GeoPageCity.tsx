@@ -21,7 +21,7 @@ function GeoPageCity({
       <div className={'geo-city'}>
         <div className='frame01 flex flex justify-center p-[0]'
         >
-          <img className="w-[40%] object-cover border-r-[1px] border-inherit" src={post.excerpt} />
+          <img className="min-w-[40%] max-w-[42%] object-cover border-r-[1px] border-inherit" src={post.excerpt} />
           <div className='p-8 overflow-y-scroll scroll-custom flex flex-col gap-9 city-link'>
             <div className='flex flex-col gap-1'>
               <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>

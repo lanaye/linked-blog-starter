@@ -117,7 +117,7 @@ export const regions = [
   },
   {
     name: 'Ілліум',
-    url: '/geo/illium',
+    url: '/city/illium',
     src: '/assets/illium.png'
   },
   {

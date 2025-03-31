@@ -39,7 +39,6 @@
   font-weight: 700;
 }
 
-
 .session-link a {
   text-decoration: underline;
   color: rgb(142, 102, 86);
@@ -48,4 +47,10 @@
 .session-link a:hover {
   text-decoration: underline;
   color: rgb(142, 102, 86, 60%);
+}
+
+.session-link blockquote {
+  margin: 10px;
+  border: 1px dotted;
+  padding: 10px;
 }

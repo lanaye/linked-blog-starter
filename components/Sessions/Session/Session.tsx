@@ -28,7 +28,7 @@ function Session({
               <div className='flex justify-between items-baseline'>
                 <div className='w-[44px] h-[44px]' />
                 <div className={`text-center text-5xl uppercase ${MookManiaBold.className}`}>{post.title}</div>
-                <a href={!backLink?.[1] ? '/characters' : backLink[1]} >
+                <a href={!backLink?.[1] ? '/sessions' : backLink[1]} >
                   <div className='cross' />
                 </a>
               </div>

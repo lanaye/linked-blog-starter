@@ -49,7 +49,7 @@ export default function Post({ post, backlinks }: Props) {
     if (post.slug === 'characters') {
       return <Characters post={post} />
     }
-    if (post.slug.includes('character')) {
+    if (post.slug.includes('character') || post.slug.includes('player')) {
       return <Character post={post} />
     }
     if (post.slug === 'sessions') {

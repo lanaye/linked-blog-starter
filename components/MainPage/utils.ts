@@ -27,7 +27,6 @@ export const getInfo = (content) => {
   })
 
   let npcs = parts[3].replace('<p>', '').replace('</p>', '').replace('\n', '').split(';\n');
-  npcs.pop();
   npcs = npcs.map((npc) => {
     const npcParts = npc.split(',');
     return {

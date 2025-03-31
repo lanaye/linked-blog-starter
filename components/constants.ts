@@ -135,6 +135,12 @@ export const regions = [
     active: true,
   },
   {
+    name: 'Меридіан',
+    url: '/geo/merydian',
+    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360218/Median_impu1s.png',
+    active: true,
+  },
+  {
     name: 'Аль-Тайрен',
     url: '/geo/al-tayren',
     src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743359993/al-tayren_itrgv7.png',
@@ -156,12 +162,6 @@ export const regions = [
     name: 'Скорхет',
     url: '/geo/skorhet',
     src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360220/skorhet_fhlijd.png',
-    active: false,
-  },
-  {
-    name: 'Меридіан',
-    url: '/geo/merydian',
-    src: 'https://res.cloudinary.com/dnalwdszh/image/upload/v1743360218/Median_impu1s.png',
     active: false,
   },
   {

@@ -3,14 +3,20 @@ import { Advent_Pro } from 'next/font/google'
 import localFont from 'next/font/local';
 import ListItem from '../ListItem/ListItem';
 import Player from '../Player/Player';
-import { npcs, players, sessions } from '../constants';
 import Npc from '../Npc/Npc';
 import Feedback from '../Feedback/Feedback';
-
+import PostType from '../../interfaces/post';
+import { getInfo } from './utils';
+type Props = {
+  post: PostType
+}
 const adventProFont = Advent_Pro({ weight: "200", subsets: ["cyrillic"] });
 const MookManiaBold = localFont({ src: '../../public/fonts/Mookmania-Bold.otf' })
 const MookMania = localFont({ src: '../../public/fonts/Mookmania.otf' })
-function MainPage() {
+function MainPage({
+  post
+}: Props) {
+  const { sessions, players, npcs, info } = getInfo(post.content);
   const sessionList = () => {
     return sessions.map((session) =>
       <ListItem
@@ -91,8 +97,8 @@ function MainPage() {
             <div className='flex flex-col justify-center gap-4'>
               {/* change here */}
               <div className='flex flex-col gap-1'>
-                <div className={`text-2xl text-center ${MookManiaBold.className}`}>19.03</div>
-                <div className={`text-xs text-center ${MookManiaBold.className}`}>середа, 18:00</div>
+                <div className={`text-2xl text-center ${MookManiaBold.className}`}>{info.date}</div>
+                <div className={`text-xs text-center ${MookManiaBold.className}`}>{info.dayTime}</div>
               </div>
               <div className={`text-xs text-center ${MookManiaBold.className}`}>клуб настільних ігор Картотека, <br />
                 вул. Головна 148</div>

@@ -33,7 +33,7 @@ export default function Post({ post, backlinks }: Props) {
   }
   const getPage = (post: PostType) => {
     if (post.slug === 'home') {
-      return <MainPage />
+      return <MainPage post={post}/>
     }
     if (post.slug === 'geo') {
       return <GeoPage />

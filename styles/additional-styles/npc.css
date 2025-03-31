@@ -12,10 +12,10 @@
 }
 
 .npc-avatar {
-  height: 380px;
+  /* height: 380px; */
   object-fit: cover;
-  width: 100%;
-  background-color: #271d27;
+  /* width: 100%; */
+  /* background-color: #271d27; */
 }
 
 .npc-text {

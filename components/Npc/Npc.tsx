@@ -19,7 +19,9 @@ function Npc({ src, name, additionalText, url }: Props) {
   return (
     <a href={url} className='npc'>
       <img src='/assets/corner-top.svg' className='corner-top' />
-      <img src={src} alt="npcs" className='npc-avatar' />
+      <div className="h-[380px] w-[333px] border-r-[1px] border-inherit flex justify-center">
+        <img src={src} alt="npcs" className='npc-avatar' />
+      </div>
       <div className='npc-text'>
         <div className={`text-2xl text-center uppercase ${MookManiaBold.className}`}>{name}</div>
         <div className={`text-base text-center ${adventProFont.className}`}>{additionalText}</div>

@@ -13,6 +13,8 @@ import GeoPageRegion from '../components/GeoPage/GeoPageRegion/GeoPageRegion'
 import GeoPageCity from '../components/GeoPage/GeoPageCity/GeoPageCity'
 import Characters from '../components/Characters/Characters'
 import Character from '../components/Characters/Character/Character'
+import Sessions from '../components/Sessions/Sessions'
+import Session from '../components/Sessions/Session/Session'
 
 type Items = {
   title: string,
@@ -49,6 +51,12 @@ export default function Post({ post, backlinks }: Props) {
     }
     if (post.slug.includes('character')) {
       return <Character post={post} />
+    }
+    if (post.slug === 'sessions') {
+      return <Sessions post={post} />
+    }
+    if (post.slug.includes('session')) {
+      return <Session post={post} />
     }
     return <PostSingle
       title={post.title}

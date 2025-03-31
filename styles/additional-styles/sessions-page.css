@@ -1,4 +1,4 @@
-.characters-page {
+.sessions-page {
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -6,33 +6,33 @@
   padding: 130px 20px 50px;
 }
 
-.characters-page .npc {
+.sessions-page .npc {
   width: min-content;
 }
 
-.character {
+.session {
   height: 100vh;
   display: flex;
   align-items: center;
   padding: 130px 20px 50px;
 }
 
-.character .frame01 {
+.session .frame01 {
   height: 100%;
   border: 1px solid;
   width: 100%;
   background-color: #271d27;
 }
 
-.character li {
+.session li {
   list-style: none;
 }
 
-.character em {
+.session em {
   padding-left: 20px;
 }
 
-.character h5 {
+.session h5 {
   margin-top: 16px;
   font-family: "MookManiaBold", "MookManiaBold Fallback";
   font-size: 18px;
@@ -40,12 +40,12 @@
 }
 
 
-.сharacter-link a {
+.session-link a {
   text-decoration: underline;
   color: rgb(142, 102, 86);
 }
 
-.сharacter-link a:hover {
+.session-link a:hover {
   text-decoration: underline;
   color: rgb(142, 102, 86, 60%);
 }

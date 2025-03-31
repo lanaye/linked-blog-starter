@@ -11,20 +11,19 @@ const MookManiaBold = localFont({ src: '../../../public/fonts/Mookmania-Bold.otf
 const adventProFont = Advent_Pro({ subsets: ["cyrillic"] });
 const adventProFontBold = Advent_Pro({ weight: "700", subsets: ["cyrillic"] });
 
-function Character({
+function Session({
   post
 }: Props) {
 
   const backLink = post.backLink?.split(',') || null;
   return (
     <>
-      <div className={'character'}>
-        <div className='frame01 flex flex justify-center p-[0]'
-        >
+      <div className={'session'}>
+        <div className='frame01 flex flex justify-center p-[0]'>
           <div className="min-w-[40%] max-w-[42%] border-r-[1px] border-inherit flex justify-center">
-          <img className="object-cover" src={post.excerpt} />
+            <img className="object-cover" src={post.excerpt} />
           </div>
-          <div className='m-8 pr-6 mr-4 overflow-y-scroll scroll-custom flex flex-col gap-9 сharacter-link'>
+          <div className='m-8 pr-6 mr-4 overflow-y-scroll scroll-custom flex flex-col gap-9 session-link'>
             <div className='flex flex-col gap-1'>
               <div className='flex justify-between items-baseline'>
                 <div className='w-[44px] h-[44px]' />
@@ -46,4 +45,4 @@ function Character({
   );
 }
 
-export default Character;
+export default Session;
